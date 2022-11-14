@@ -1,6 +1,6 @@
 # 启动端口号
 server:
-  post: 8000
+  post: 4020
 
 # MySQL数据源配置
 mysql:

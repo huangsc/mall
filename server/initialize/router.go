@@ -77,7 +77,7 @@ func Router() {
 	}
 
 	// 微信小程序API
-	app := engine.Group("/app")
+	app := engine.Group("/mina")
 
 	{
 		// 用户登录
