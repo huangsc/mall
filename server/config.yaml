@@ -11,7 +11,7 @@ mysql:
 # 图片路径配置
 upload:
   savePath: /data/resource/images/
-  accessUrl: http://localhost:8000/image/
+  accessUrl: https://haozhiyuan.ltd/image/
 
 # JWT配置
 jwt:
