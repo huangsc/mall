@@ -6,12 +6,12 @@ server:
 mysql:
   username: root
   password: sten880513
-  url: tcp(localhost:3306)/imall?charset=utf8&parseTime=True&loc=Local
+  url: tcp(localhost:3306)/scmall?charset=utf8&parseTime=True&loc=Local
 
 # 图片路径配置
 upload:
   savePath: /data/resource/images/
-  accessUrl: https://haozhiyuan.ltd/image/
+  accessUrl: https:/saicheng.wosu.tech/image/
 
 # JWT配置
 jwt:

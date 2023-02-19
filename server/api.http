@@ -1,0 +1,63 @@
+@baseUrl = https://saicheng.wosu.tech/scmall/api
+
+
+# @name login
+POST  {{baseUrl}}/web/login
+Content-Type: application/json
+
+{
+    "username"	: "admin",
+    "password"	: "12345",
+    "captchaValue"	: "9529",
+    "captchaId"	: "6nghTcFURNNo4FAGq1AX"
+}
+
+###
+GET {{baseUrl}}/web/captcha
+
+###
+@authToken = {{login.response.body.data.token}}
+
+###
+GET    {{baseUrl}}/web/category/list?sid=100001
+token: {{authToken}}
+
+###
+DELETE  {{baseUrl}}/web/category/delete?id=2077
+token: {{authToken}}
+
+
+###
+POST    {{baseUrl}}/web/category/create
+token: {{authToken}}
+Content-Type: application/json
+
+{
+    "name": "脆李",
+    "parentId": 1,
+    "level": 1,
+    "sort": 3,
+    "sid": 100001
+}
+
+###
+PUT    {{baseUrl}}/web/category/update
+token: {{authToken}}
+Content-Type: application/application/x-www-form-urlencoded
+
+{
+    "id": 2055,
+    "name": "脆李",
+    "sort": 3
+}
+
+###
+GET  {{baseUrl}}/web/category/option
+token: {{authToken}}
+
+
+
+
+###
+GET  {{baseUrl}}/web/goods/list?sid=100001&id=52&pageNum=1&pageSize=10
+token: {{authToken}}
